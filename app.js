@@ -3,15 +3,21 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-});
-
-app.use(express.static('public'));
-
 app.get('/about', (req, res) => {
     res.send("Это простое приложение на Express.js");
 });
+
+let counter = 0;
+app.get('/', (req, res, next) => {
+    counter = counter + 1;
+    if (counter == 1) {
+        res.redirect('/index.html');
+    } else {
+        res.send('Hello, world!');
+    }
+});
+
+app.use(express.static('public'));
 
 app.use((req, res) => {
     res.status(404).send("Страница не найдена");
