@@ -20,10 +20,18 @@
 ### Требования
 Для установки и запуска проекта, необходимо:
 - Установить Node.js на свою машину, следуя инструкциям на официальном сайте (https://nodejs.org).
-- Создать новый проект Node.js и установите Express.js с помощью npm.
+  ```sh
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  . $NVM_DIR/nvm.sh
+  nvm install 20
+  ```
+- Установите Express.js с помощью npm:
+  ```sh
+  npm install express --save
+  ```
 
 ### Запуск
-Чтобы запустить проект, выполните команду:
+Чтобы запустить проект, перейдите в репозиторий и выполните команду:
 ```sh
 node app.js
 ```
