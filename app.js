@@ -3,6 +3,10 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+app.get('/', (req, res) => {
+    res.send('Hello, world!');
+});
+
 app.use(express.static('public'));
 
 app.get('/about', (req, res) => {
@@ -11,10 +15,6 @@ app.get('/about', (req, res) => {
 
 app.use((req, res) => {
     res.status(404).send("Страница не найдена");
-});
-
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
 });
 
 app.listen(3000, (error) => {
