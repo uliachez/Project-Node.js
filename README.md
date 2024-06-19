@@ -19,7 +19,7 @@
 ## Разработка
 ### Требования
 Для установки и запуска проекта, необходимо:
-- Установить Node.js на свою машину, следуя инструкциям на официальном сайте (https://nodejs.org).
+- Установить Node.js на свою машину, следуя инструкциям на официальном сайте (https://nodejs.org), к примеру, на MacOs:
   ```sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
   . $NVM_DIR/nvm.sh
